@@ -5,9 +5,14 @@ on:
     tags:
       - 'v*.*.*'
 
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   docker-release:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Get release version
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV

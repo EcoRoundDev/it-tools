@@ -1,5 +1,5 @@
 # build stage
-FROM node:lts-alpine AS build-stage
+FROM --platform=$BUILDPLATFORM node:18.18.2-alpine AS build-stage
 # Set environment variables for non-interactive npm installs
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV CI true
