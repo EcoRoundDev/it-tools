@@ -61,6 +61,7 @@ import { tool as etaCalculator } from './eta-calculator';
 import { tool as percentageCalculator } from './percentage-calculator';
 import { tool as gitMemo } from './git-memo';
 import { tool as hashText } from './hash-text';
+import { tool as crcCalculator } from './crc-calculator';
 import { tool as hmacGenerator } from './hmac-generator';
 import { tool as htmlEntities } from './html-entities';
 import { tool as baseConverter } from './integer-base-converter';
@@ -146,6 +147,7 @@ export const toolsByCategory: ToolCategory[] = [
   {
     name: 'Development',
     components: [
+      crcCalculator,
       gitMemo,
       randomPortGenerator,
       crontabGenerator,

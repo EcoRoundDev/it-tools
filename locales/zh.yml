@@ -71,6 +71,30 @@ tools:
     text: '文本'
     data: '数据'
 
+  crc-calculator:
+    title: CRC 计算器
+    description: 计算 HEX 设备报文的 CRC 校验值，一键复制 CRC 或追加 CRC 后的完整报文。
+    algorithm: CRC 算法
+    byteOrder: CRC 字节序
+    littleEndian: 低字节在前（小端）
+    bigEndian: 高字节在前（大端）
+    separator: 输出字节分隔符
+    space: 空格
+    none: 无分隔符
+    input: 设备报文（HEX，不包含 CRC）
+    inputHelp: 支持连续 HEX、空格、换行、逗号及 0x 前缀，例如 01030000000A 或 0x01 0x03 0x00 0x00 0x00 0x0A。
+    coverageHelp: 请只输入协议规定参与 CRC 计算的字节，不要包含已有的 CRC。HEX 按原始字节计算，不按文本计算。
+    invalidHex: 请输入完整的 HEX 字节（00 至 FF）。每组必须包含偶数个十六进制字符，可带 0x 前缀。
+    checksum: CRC 校验值（HEX 数值）
+    checksumBytes: CRC 字节（按所选字节序排列）
+    packet: 追加 CRC 后的完整报文
+    copyChecksum: 复制 CRC 校验值
+    copyBytes: 复制 CRC 字节
+    copyPacket: 复制完整报文
+    copied: 已复制到剪贴板
+    byteCount: '输入长度：{count} 字节'
+    byteOrderHelp: Modbus 默认低字节在前，其他预设初始为高字节在前；请按设备协议选择 CRC 变体和发送字节序。
+
   password-strength-analyser:
     title: 密码强度分析仪
     description: 使用此密码强度分析器和破解时间估计工具来发现密码的强度。

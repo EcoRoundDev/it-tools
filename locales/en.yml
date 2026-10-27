@@ -71,6 +71,30 @@ tools:
     text: Text
     data: Data
 
+  crc-calculator:
+    title: CRC calculator
+    description: Calculate CRC checksums for HEX device packets and copy the complete packet with CRC.
+    algorithm: CRC algorithm
+    byteOrder: CRC byte order
+    littleEndian: Low byte first (little-endian)
+    bigEndian: High byte first (big-endian)
+    separator: Output byte separator
+    space: Space
+    none: None
+    input: Device packet (HEX, without CRC)
+    inputHelp: 'Accepts continuous HEX, spaces, newlines, commas and 0x prefixes, for example: 01030000000A or 0x01 0x03 0x00 0x00 0x00 0x0A.'
+    coverageHelp: Enter only the bytes covered by the CRC calculation, without an existing CRC. HEX is interpreted as raw bytes, not text.
+    invalidHex: Enter complete HEX bytes (00 to FF). Each group must contain an even number of HEX digits, optionally prefixed with 0x.
+    checksum: CRC checksum (HEX value)
+    checksumBytes: CRC bytes (in selected byte order)
+    packet: Complete packet with CRC appended
+    copyChecksum: Copy CRC value
+    copyBytes: Copy CRC bytes
+    copyPacket: Copy complete packet
+    copied: Copied to the clipboard
+    byteCount: 'Input length: {count} bytes'
+    byteOrderHelp: Modbus defaults to low byte first. Other presets start with high byte first; select the CRC variant and byte order required by your device protocol.
+
   password-strength-analyser:
     title: Password strength analyser
     description: Discover the strength of your password with this client-side-only password strength analyser and crack time estimation tool.
