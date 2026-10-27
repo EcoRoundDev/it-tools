@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.10.27-77df5b2
+
+### Bug fixes
+- **releases**: update Docker image references to use ecorounddev (77df5b2)
+
 ## Version 2026.10.27-f50f57e
 
 ### Features
