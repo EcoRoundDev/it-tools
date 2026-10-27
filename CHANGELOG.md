@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.10.27-f50f57e
+
+### Features
+- **crc-calculator**: add CRC calculator for HEX device packets (ef97044)
+- **sponsor**: added sponsor banner (#1422) (08d977b)
+- **i18n**: added Norwegian language (#1337) (aa8cba9)
+
+### Bug fixes
+- **releases**: update Docker image references to use ecorounddev (f50f57e)
+- **c-input-text**: set minimum height for input field (#1552) (a4ab7db)
+- **locales**: update license from MIT to GPL-3.0 in language files (#1419) (63fbd3b)
+- **icons,branding**: swap twitter to X (#1369) (ea8c4ed)
+- **FavoriteButton**: pass tool path to favorite button (#1368) (ae13639)
+- **readme**: refresh stale contributors graph (#1364) (c7b80fb)
+- **yaml-to-json**: allow merge key to be parsed (#1359) (f836666)
+
+### Refactoring
+- **sponsors**: removed sponsor banners (#1553) (07eea0f)
+- **sponsor**: removed sponsor banner and related configurations (#1405) (b47d132)
+
+### Chores
+- **readme**: remove sponsors section (#1733) (d505845)
+- **sponsors**: added warp banner (#1664) (0de73e8)
+
+### Other
+-  feat(favorites) drag-and-drop favorites section (#1360) (0b1b98f)
+-  feat(html-wysiwyg-editor) h3 fix (#1363) (1314973)
+
 ## Version 2024.10.22-7ca5933
 
 ### Features
