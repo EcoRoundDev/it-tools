@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2026.10.27-930fea6
+
+### Bug fixes
+- **workflows**: update permissions and timeout in releases workflow (930fea6)
+
 ## Version 2026.10.27-77df5b2
 
 ### Bug fixes
