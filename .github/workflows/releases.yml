@@ -96,8 +96,8 @@ jobs:
               - `writing/it-tools:latest`
               - `writing/it-tools:${{ env.RELEASE_VERSION }}`
             - GitHub Container Registry
-              - `ghcr.io/writing/it-tools:latest`
-              - `ghcr.io/writing/it-tools:${{ env.RELEASE_VERSION}}`
+              - `ghcr.io/ecorounddev/it-tools:latest`
+              - `ghcr.io/ecorounddev/it-tools:${{ env.RELEASE_VERSION }}`
 
             ## Changelog
 
