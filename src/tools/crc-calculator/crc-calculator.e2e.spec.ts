@@ -100,10 +100,16 @@ test.describe('Tool - CRC calculator', () => {
   });
 
   test('supports Chinese labels and copying on a narrow screen', async ({ page }) => {
-    await page.evaluate(() => localStorage.setItem('locale', 'zh'));
+    await page.evaluate(() => {
+      localStorage.setItem('locale', 'zh');
+      // The mobile sidebar is an overlay; collapse it before reloading so it
+      // cannot intercept the copy button click.
+      localStorage.setItem('isMenuCollapsed', 'true');
+    });
     await page.setViewportSize({ width: 390, height: 844 });
     await page.reload();
 
+    await expect(page.locator('.overlay')).toBeHidden();
     await expect(page.getByRole('heading', { name: 'CRC 计算器', exact: true })).toBeVisible();
     await expect(page.getByTestId('copy-crc-packet')).toHaveText('复制完整报文');
     await expect(page.getByTestId('crc-byte-count')).toHaveText('输入长度：6 字节');

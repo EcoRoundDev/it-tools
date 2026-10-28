@@ -65,6 +65,7 @@ import { tool as crcCalculator } from './crc-calculator';
 import { tool as hmacGenerator } from './hmac-generator';
 import { tool as htmlEntities } from './html-entities';
 import { tool as baseConverter } from './integer-base-converter';
+import { tool as hexConverter } from './hex-converter';
 import { tool as jsonViewer } from './json-viewer';
 import { tool as jwtParser } from './jwt-parser';
 import { tool as loremIpsumGenerator } from './lorem-ipsum-generator';
@@ -99,6 +100,7 @@ export const toolsByCategory: ToolCategory[] = [
     components: [
       dateTimeConverter,
       baseConverter,
+      hexConverter,
       romanNumeralConverter,
       base64StringConverter,
       base64FileConverter,

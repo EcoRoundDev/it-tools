@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import type { CrcAlgorithmId, CrcByteOrder, HexSeparator } from './crc-calculator.service';
-import { calculatePacketCrc, crcAlgorithms, parseHexInput } from './crc-calculator.service';
+import { calculatePacketCrc, crcAlgorithms } from './crc-calculator.service';
 import { useCopy } from '@/composable/copy';
 import { useValidation } from '@/composable/validation';
 import { isNotThrowing } from '@/utils/boolean';
+import { parseHexInput } from '@/utils/hex';
 
 const { t, locale } = useI18n();
 const input = ref('01 03 00 00 00 0A');
@@ -125,7 +126,7 @@ function formatParameter(value: number) {
             :label="output.label"
             :test-id="`crc-${output.id}`"
             placeholder=""
-            multiline raw-text monospace readonly autosize
+            multiline raw-text monospace autosize readonly
             rows="2"
           />
           <div mt-2 flex justify-end>

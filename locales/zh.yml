@@ -95,6 +95,43 @@ tools:
     byteCount: '输入长度：{count} 字节'
     byteOrderHelp: Modbus 默认低字节在前，其他预设初始为高字节在前；请按设备协议选择 CRC 变体和发送字节序。
 
+  hex-converter:
+    title: HEX 转换器
+    description: 将 HEX 字节解码为 ASCII、二进制、IEEE-754 浮点数及有符号/无符号整数，并同时展示 RAW 字节和所有常见字节序的结果。
+    input: HEX 输入
+    inputLabel: HEX 字节
+    inputPlaceholder: 例如：41 48 00 00
+    inputHelp: 支持连续 HEX、空格、换行、逗号及 0x 前缀；按原始字节解析，不按文本解析。
+    invalidHex: 请输入完整的 HEX 字节（00 至 FF）。每组必须包含偶数个十六进制字符，可带 0x 前缀。
+    byteCount: 共 {count} 字节
+    normalizedRaw: 规范化 RAW
+    longInputHint: 输入较长（{count} 字节）。结果会完整显示，但浏览器渲染可能需要一些时间。
+    empty: 输入 HEX 字节后，这里会显示解码结果。
+    invalidHint: 请修正 HEX 输入后查看解码结果。
+    textResults: 文本结果
+    values32: 32 位值
+    values32Hint: 每 4 字节一组
+    values16: 16 位值
+    values16Hint: 每 2 字节一组
+    scrollHint: 左右滑动表格可查看全部字节序。
+    raw: RAW
+    offset: 偏移
+    type: 类型
+    value: 值
+    asciiMode: 非打印字符
+    asciiEscape: 转义
+    asciiDots: 点号
+    copyRaw: 复制 RAW
+    copyValue: 复制值
+    copied: 已复制到剪贴板
+    trailing32: 末尾 {count} 字节不足 4 字节，未参与 32 位转换。
+    trailing16: 末尾 {count} 字节不足 2 字节，未参与 16 位转换。
+    need4Bytes: 至少需要 4 字节才能显示 32 位转换。
+    need2Bytes: 至少需要 2 字节才能显示 16 位转换。
+    inputNote: RAW 始终按输入顺序展示；不同字节序只改变解释顺序，不改变 RAW。
+    endianNote: Mid-Big 与 Mid-Little 的名称在不同资料中可能相反，本工具以括号内的排列（BADC / CDAB）为准。
+    asciiNote: ASCII 仅解释 0x00–0x7F；非打印字符默认转义显示，可切换为点号。
+
   password-strength-analyser:
     title: 密码强度分析仪
     description: 使用此密码强度分析器和破解时间估计工具来发现密码的强度。

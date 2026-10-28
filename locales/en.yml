@@ -95,6 +95,43 @@ tools:
     byteCount: 'Input length: {count} bytes'
     byteOrderHelp: Modbus defaults to low byte first. Other presets start with high byte first; select the CRC variant and byte order required by your device protocol.
 
+  hex-converter:
+    title: HEX converter
+    description: Decode HEX bytes into ASCII, binary, IEEE-754 floats and signed/unsigned integers, showing RAW bytes and results for every common byte order.
+    input: HEX input
+    inputLabel: HEX bytes
+    inputPlaceholder: 'e.g. 41 48 00 00'
+    inputHelp: 'Accepts continuous HEX, spaces, newlines, commas and 0x prefixes; HEX is parsed as raw bytes, not as text.'
+    invalidHex: 'Enter complete HEX bytes (00 to FF). Each group must contain an even number of hex digits, optionally prefixed with 0x.'
+    byteCount: '{count} bytes'
+    normalizedRaw: Normalized RAW
+    longInputHint: 'Long input ({count} bytes). All results are shown, but rendering may take a while.'
+    empty: 'Enter HEX bytes to see the decoded values.'
+    invalidHint: 'Fix the HEX input to see the decoded values.'
+    textResults: Text results
+    values32: 32-bit values
+    values32Hint: One group per 4 bytes
+    values16: 16-bit values
+    values16Hint: One group per 2 bytes
+    scrollHint: Swipe the table horizontally to see every byte order.
+    raw: RAW
+    offset: Offset
+    type: Type
+    value: Value
+    asciiMode: Non-printable characters
+    asciiEscape: Escape
+    asciiDots: Dots
+    copyRaw: Copy RAW
+    copyValue: Copy value
+    copied: Copied to the clipboard
+    trailing32: 'The last {count} trailing byte(s) do not form a 4-byte group and are not decoded as 32-bit values.'
+    trailing16: 'The last {count} trailing byte(s) do not form a 2-byte group and are not decoded as 16-bit values.'
+    need4Bytes: At least 4 bytes are needed for 32-bit values.
+    need2Bytes: At least 2 bytes are needed for 16-bit values.
+    inputNote: 'RAW always follows the input order. Byte order changes only how the bytes are interpreted, not the RAW display.'
+    endianNote: 'Mid-Big and Mid-Little naming varies between vendors. This tool follows the byte permutation in parentheses (BADC / CDAB).'
+    asciiNote: 'ASCII interprets 0x00–0x7F only. Non-printable bytes are escaped by default; switch to dots if preferred.'
+
   password-strength-analyser:
     title: Password strength analyser
     description: Discover the strength of your password with this client-side-only password strength analyser and crack time estimation tool.
